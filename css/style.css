@@ -1,0 +1,202 @@
+/* Reset CSS
+		 * --------------------------------------- */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+table {
+  border-spacing: 0;
+}
+fieldset, img {
+  border: 0;
+}
+address, caption, cite, code, dfn, em, strong, th, var {
+  font-weight: normal;
+  font-style: normal;
+}
+strong {
+  font-weight: bold;
+}
+ol, ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+caption, th {
+  text-align: left;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  color: #444;
+}
+q:before, q:after {
+  content: '';
+}
+abbr, acronym {
+  border: 0;
+}
+
+/**
+ * Vertical rhythm by Syncope
+ * http://nowodzinski.pl/syncope
+ */
+
+html, body {
+  font-size: calc(16px + 1vmin);
+  line-height: 1.6em;
+  font-family: -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen-Sans,
+    Ubuntu,
+    Cantarell,
+    "Helvetica Neue",
+    sans-serif;
+}
+h1 {
+  font-size: 2.06em;
+  line-height: 1.58em;
+  padding-top: 0.455em;
+  margin-bottom: 0.333em;
+}
+
+h2 {
+  font-size: 1.75em;
+  line-height: 1.86em;
+  padding-top: 0.571em;
+  margin-bottom: 0.357em;
+}
+
+h3 {
+  font-size: 1.44em;
+  line-height: 1.13em;
+  padding-top: 0.217em;
+  margin-bottom: 0.913em;
+}
+
+h4 {
+  font-size: 1.19em;
+  line-height: 1.37em;
+  padding-top: 0.368em;
+  margin-bottom: 1.00em;
+}
+
+p {
+  font-size: 1.00em;
+  line-height: 1.63em;
+  padding-top: 0.500em;
+  margin-bottom: 1.13em;
+}
+
+/* Custom CSS
+		 * --------------------------------------- */
+
+.content {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+/* MY STUFF  */
+.content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.slide-header, .slide-footer {
+  background-color: yellow;
+}
+.slide-header {
+  min-height: 10vh;
+}
+.slide-footer {
+  display: flex;
+  min-height: 5vh;
+  font-size: smaller;
+}
+
+.slide-footer, .slide-footer-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.slide-footer-child {
+  margin: 1em;
+/*   max-width: 50vw; */
+}
+ .logo {
+  margin: 0.5em;
+   font-size: smaller;
+}
+.license {
+  font-size: small;
+}
+@media all and (max-width: 51em) {
+  .license {
+    display: none;
+  }
+}
+.slide-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.slide-title {
+  flex-grow: 2;
+}
+.slide-body {
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.slide-header--alt {
+  background-color: white;
+}
+
+.slide-body--alt{
+   background: url("../img/xml-oxford.jpg") no-repeat center top;
+}
+
+.slide-body ol {
+  list-style-type: decimal;
+  padding-left: 2em;
+}
+
+.slide-list{
+  display: block;
+  margin: auto 0;
+}

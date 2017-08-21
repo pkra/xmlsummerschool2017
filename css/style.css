@@ -191,12 +191,20 @@ p {
    background: url("../img/xml-oxford.jpg") no-repeat center top;
 }
 
-.slide-body ol {
-  list-style-type: decimal;
+.slide-list{
+  display: block;
+  margin: 0 auto;
   padding-left: 2em;
 }
 
-.slide-list{
-  display: block;
-  margin: auto 0;
+ol.slide-list {
+  list-style-type: decimal;
+}
+
+ul.slide-list{
+  list-style-type: disc;
+}
+
+li {
+  text-align: left;
 }

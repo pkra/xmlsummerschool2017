@@ -20,7 +20,6 @@ fieldset,
 input,
 textarea,
 p,
-blockquote,
 th,
 td {
   padding: 0;
@@ -34,6 +33,7 @@ table {
 }
 fieldset, img {
   border: 0;
+  margin: auto
 }
 address, caption, cite, code, dfn, em, strong, th, var {
   font-weight: normal;
@@ -70,7 +70,7 @@ abbr, acronym {
  */
 
 html, body {
-  font-size: calc(16px + 1vmin);
+  font-size: calc(16px + .8vmin);
   line-height: 1.6em;
   font-family: -apple-system,
     BlinkMacSystemFont,
@@ -96,25 +96,12 @@ h2 {
   margin-bottom: 0.357em;
 }
 
-h3 {
+/* h3 */
+p {
   font-size: 1.44em;
   line-height: 1.13em;
   padding-top: 0.217em;
   margin-bottom: 0.913em;
-}
-
-h4 {
-  font-size: 1.19em;
-  line-height: 1.37em;
-  padding-top: 0.368em;
-  margin-bottom: 1.00em;
-}
-
-p {
-  font-size: 1.00em;
-  line-height: 1.63em;
-  padding-top: 0.500em;
-  margin-bottom: 1.13em;
 }
 
 /* Custom CSS
@@ -132,6 +119,10 @@ p {
   display: flex;
   flex-direction: column;
   height: 100%;
+}
+content > * {
+  min-width: 30vw;
+  max-width: 90vw;
 }
 
 .slide-header, .slide-footer {
@@ -207,4 +198,22 @@ ul.slide-list{
 
 li {
   text-align: left;
+}
+
+.flexcol{
+  display: flex;
+  flex-direction: column;
+  margin-top: 1em
+}
+
+blockquote{
+  margin-bottom: 2em;
+  font-variant: italic;
+  font-weight: bolder;
+}
+
+.name {
+  background-color: white;
+  border-radius: 5px;
+  padding: 0 5px;
 }

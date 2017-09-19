@@ -1,5 +1,6 @@
 /* Reset CSS
 		 * --------------------------------------- */
+
 body,
 div,
 dl,
@@ -25,63 +26,86 @@ td {
   padding: 0;
   margin: 0;
 }
+
 a {
   text-decoration: none;
 }
+
 table {
   border-spacing: 0;
 }
-fieldset, img {
+
+fieldset,
+img {
   border: 0;
   margin: auto
 }
-address, caption, cite, code, dfn, em, strong, th, var {
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
   font-weight: normal;
   font-style: normal;
 }
+
 strong {
   font-weight: bold;
 }
-ol, ul {
+
+ol,
+ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-caption, th {
+
+caption,
+th {
   text-align: left;
 }
-h1, h2, h3, h4, h5, h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: normal;
   font-size: 100%;
   margin: 0;
   padding: 0;
   color: #444;
 }
-q:before, q:after {
+
+q:before,
+q:after {
   content: '';
 }
-abbr, acronym {
+
+abbr,
+acronym {
   border: 0;
 }
 
-/**
- * Vertical rhythm by Syncope
- * http://nowodzinski.pl/syncope
- */
 
-html, body {
-  font-size: calc(16px + .8vmin);
+/**
+      * Vertical rhythm by Syncope
+      * http://nowodzinski.pl/syncope
+      */
+
+html,
+body {
+  font-size: calc(16px + .5vmin);
   line-height: 1.6em;
-  font-family: -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    Oxygen-Sans,
-    Ubuntu,
-    Cantarell,
-    "Helvetica Neue",
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
+
 h1 {
   font-size: 2.06em;
   line-height: 1.58em;
@@ -96,7 +120,9 @@ h2 {
   margin-bottom: 0.357em;
 }
 
+
 /* h3 */
+
 p {
   font-size: 1.44em;
   line-height: 1.13em;
@@ -104,109 +130,110 @@ p {
   margin-bottom: 0.913em;
 }
 
-/* Custom CSS
-		 * --------------------------------------- */
 
-.content {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  text-align: center;
-}
+/* from remarkJS demo */
+@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
 
-/* MY STUFF  */
-.content {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-content > * {
-  min-width: 30vw;
-  max-width: 90vw;
+.remark-code,
+.remark-inline-code {
+  font-family: 'Ubuntu Mono';
 }
 
-.slide-header, .slide-footer {
-  background-color: yellow;
+
+/* invers (Frontpage)  */
+
+.inverse a,
+.inverse a:visited {
+  color: currentColor;
+  text-decoration: none;
+  border-bottom: 0.5px solid;
 }
-.slide-header {
-  min-height: 10vh;
-}
-.slide-footer {
-  display: flex;
-  min-height: 5vh;
-  font-size: smaller;
+.inverse {
+  background: url("https://pkra.github.io/xmlsummerschool2017/img/xml-oxford.jpg") no-repeat center top;
 }
 
-.slide-footer, .slide-footer-child {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
+/* reset some remark styles */
+
+.remark-container {
+  background: white;
 }
-.slide-footer-child {
-  margin: 1em;
-/*   max-width: 50vw; */
+
+.remark-slide-scaler {
+  box-shadow: none;
 }
- .logo {
-  margin: 0.5em;
-   font-size: smaller;
-}
-.license {
-  font-size: small;
-}
-@media all and (max-width: 51em) {
-  .license {
-    display: none;
-  }
-}
-.slide-header {
+
+/* CUSTOM header, footer */
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
 }
-.slide-title {
-  flex-grow: 2;
+
+.footer {
+  position: absolute;
+  bottom: 0px;
 }
-.slide-body {
-  flex-grow: 2;
+
+.header,
+.footer {
+  background-color: yellow;
+}
+
+.header {
+  min-height: 10vh;
+}
+
+.footer {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  min-height: 5vh;
+  font-size: smaller;
+  width: 100%;
+  z-index: 100;
 }
 
-.slide-header--alt {
-  background-color: white;
-}
-
-.slide-body--alt{
-   background: url("../img/xml-oxford.jpg") no-repeat center top;
-}
-
-.slide-list{
-  display: block;
-  margin: 0 auto;
-  padding-left: 2em;
-}
-
-ol.slide-list {
-  list-style-type: decimal;
-}
-
-ul.slide-list{
-  list-style-type: disc;
-}
-
-li {
-  text-align: left;
-}
-
-.flexcol{
+.footer,
+.footer-child {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-child {
+  margin: 1em;
+  /*   max-width: 50vw; */
+}
+
+.logo {
+  margin: 0.5em;
+  font-size: smaller;
+}
+
+.license {
+  font-size: small;
+}
+
+@media all and (max-width: 51em) {
+  .license {
+    display: none;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.flexcol {
+  display: inline-flex;
   flex-direction: column;
   margin-top: 1em
 }
 
-blockquote{
+blockquote {
   margin-bottom: 2em;
   font-variant: italic;
   font-weight: bolder;
@@ -218,45 +245,30 @@ blockquote{
   padding: 0 5px;
 }
 
+.bg-white {
+  background-color: white!important
+}
+
+/* ol {
+  list-style-type: decimal;
+}
+*/
+ul{
+  list-style-type: disc;
+}
+
+li {
+  text-align: left;
+}
+
+li+li {
+  margin-top: .25em;
+}
+
+.remark-slide-container{
+  height: 80vh
+}
+
 @media print {
-  /* Override javascript inline styles */
-html,
-body {
-    overflow: visible !important;
-    height: auto !important;
-}
-
-.fullpage-wrapper {
-    height: auto !important;
-    transform: none !important;
-    transition: none !important;
-}
-
-.fp-section {
-    height: 100vh;
-}
-
-.fp-slidesContainer {
-    width: auto !important;
-    transition: none !important;
-    transform: none !important;
-}
-
-.fp-slides,
-.fp-slides * {
-    position: static !important;
-}
-
-.fp-slide {
-    width: auto !important;
-}
-.fp-section{
-  page-break-after: always !important;
-  page-break-inside: avoid;
-}
-.fp-slide{
-  page-break-after: always !important;
-  page-break-inside: avoid;
-
-}
+  details { display:block !important; }
 }
